@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+        {{ message }}
+    <h1>{% block title %} Data {% endblock %}</h1>
+          {% for data in user %}
+            <table>
+              <thread>
+                <tr>
+                  <th>№</th>
+                  <th>login</th>
+                  <th>password</th>
+                  <th>carma</th>
+                </tr>
+              </thread>
+              <tbody>
+              <tr>
+            {% for record in data %}
+              <td>
+              {{ record }}
+              </td>
+            {% endfor %}
+              </tr>
+              </tbody> 
+            </table>
+      {% endfor %}
+{% endblock %}
