@@ -20,40 +20,31 @@ def init_dba():
     cur.execute('CREATE TABLE public.user (id serial PRIMARY KEY,'
                                             'login varchar (80) NOT NULL,'
                                             'password varchar (90) NOT NULL,'
-                                            'carma integer NOT NULL);'
+                                            'carma varchar (90) NOT NULL);'
                                             )
                                             
     cur.execute('INSERT INTO public.themes (name, cnt_mess) VALUES (%s, %s)',
-                ('Аниме',
-                6772)
+                ('Война и мир',
+                677)
                 )
     cur.execute('INSERT INTO public.themes (name, cnt_mess) VALUES (%s, %s)',
-                ('Приколы',
-                8054)
-                )
-    cur.execute('INSERT INTO public.themes (name, cnt_mess) VALUES (%s, %s)',
-                ('Рецепты',
-                560)
-                )
-    cur.execute('INSERT INTO public.themes (name, cnt_mess) VALUES (%s, %s)',
-                ('Садоводство',
-                122)
-                )    
-                           
+                ('Отцы и дети',
+                304)
+           	)          
     cur.execute('INSERT INTO public.user (login, password, carma) VALUES (%s, %s, %s)',
                 ('animeshnik',
                 'mikumiku',
-                88)
+                'admin')
                 )
     cur.execute('INSERT INTO public.user (login, password, carma) VALUES (%s, %s, %s)',
                 ('babavalya',
                 'vnuchok0709',
-                5)
+                'moder')
                 )
     cur.execute('INSERT INTO public.user (login, password, carma) VALUES (%s, %s, %s)',
                 ('anonimus',
                 'hacktheworld',
-                -20)
+                'user')
                 )
 
     conn.commit()
