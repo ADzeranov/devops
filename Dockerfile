@@ -10,4 +10,4 @@ ENV PATH="$VIRTUAL_ENV/bin:$PATH"
 
 RUN pip install bandit && pip install pycodestyle
 
-ENTRYPOINT ["bash"]
+CMD ["python3","analize.py"]
