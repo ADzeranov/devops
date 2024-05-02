@@ -16,7 +16,7 @@ services:
 
   app:
     container_name: app1
-    image: adzeranov/library:latest
+    # image: adzeranov/library:latest
     build:
       context: .
       dockerfile: Dockerfile
